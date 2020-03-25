@@ -4,7 +4,7 @@
 #include <QMouseEvent>
 
 Pointer::Pointer() {
-  setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+  setWindowFlags(Qt::Window | Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
   setPixmap(QPixmap(":/pointer.png"));
   setStyleSheet("background: transparent;");
   setAttribute(Qt::WA_TranslucentBackground);
