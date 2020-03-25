@@ -1,12 +1,18 @@
 #include "Pointer.h"
 
 #include <QKeyEvent>
+#include <QMouseEvent>
 
 Pointer::Pointer() {
   setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
   setPixmap(QPixmap(":/pointer.png"));
   setStyleSheet("background: transparent;");
   setAttribute(Qt::WA_TranslucentBackground);
+  setMouseTracking(true);
+}
+
+void Pointer::mouseMoveEvent(QMouseEvent *) {
+  move(QCursor::pos() - QPoint(32,32));
 }
 
 void Pointer::keyPressEvent(QKeyEvent *e) {

@@ -8,5 +8,6 @@ class Pointer : public QLabel {
 
 public:
   Pointer();
+  void mouseMoveEvent(QMouseEvent *e);
   void keyPressEvent(QKeyEvent *e);
 };
