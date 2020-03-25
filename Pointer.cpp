@@ -8,7 +8,7 @@ Pointer::Pointer() {
   setPixmap(QPixmap(":/pointer.png"));
   setStyleSheet("background: transparent;");
   setAttribute(Qt::WA_TranslucentBackground);
-  setMouseTracking(true);
+  // setMouseTracking(true); // mouse events generated even without button press
 }
 
 void Pointer::mouseMoveEvent(QMouseEvent *) {
