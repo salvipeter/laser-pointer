@@ -1,0 +1,7 @@
+*~
+laser-pointer
+*.o
+qrc_*
+moc_*
+*.stash
+Makefile
